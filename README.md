@@ -1,2 +1,0 @@
-# OkCompiler
-An alright compiler.
