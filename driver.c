@@ -52,7 +52,7 @@ void printToken(int tokenNum) {
     printf("<OP, %s>", yytext);
     break;
 	
-	/* brackets & parens */
+  /* brackets & parens */
   case LSQ_BRKT:
     printf("<LSQ_BRKT>");
     break;
