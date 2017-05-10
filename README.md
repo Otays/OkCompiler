@@ -1,6 +1,6 @@
 # OKCompiler (0.4.3) README #
 
-OKCompiler is a miniature version of the C language, with a few extra features.__
+OKCompiler is a miniature version of the C language, with a few extra features.<br />
 It was developed for educational purposes.
 
 ## Language Description ##
@@ -16,19 +16,19 @@ __C-Like features:__
    - Subtraction, denoted by -
    - Multiplication, denoted by *
    - Division, denoted by /
-   - Modulus, denoted by %__
+   - Modulus, denoted by %<br />
 	(Multiplication level precedence) 
 
-__Additional features:__
- - Hexadecimal constants, denoted by prefix '0x'__
+__Additional features:<br />
+ - Hexadecimal constants, denoted by prefix '0x'<br />
    (e.g. int x; x = 0x5F;)
- - Binary constants, denoted by prefix '0b'__
+ - Binary constants, denoted by prefix '0b'<br />
    (e.g. int y; y = 0b11001;)
- - Type "Void"__
+ - Type "Void"<br />
    (Expiremental data type that challenges the semantic analysis, the  
     implementation does not follow through to code gen)
  - Operators
-   - Unary "Phi" operator, aka Eulers totient function.__
+   - Unary "Phi" operator, aka Eulers totient function.<br />
      Denoted by @(n) for an integer n.
 	
  
@@ -76,9 +76,9 @@ __Code Generation:__
  - Many features excluded from code gen
  
 ## Usage: ##
- - Highly recommend a black background terminal for the color coded output.__
+ - Highly recommend a black background terminal for the color coded output.<br />
 	(I've tested with Putty)
- - Recommend using the test files provided__
+ - Recommend using the test files provided<br />
 	./mcc < test.mc
 
 ## Required files: ##
