@@ -1,70 +1,87 @@
---- OKCompiler (0.4.3) README ---
+# OKCompiler (0.4.3) README 
 
-Features added by the author:
- - Runtime output
- - Boolean constants
-	(true,TRUE,false,FALSE)
- - Boolean keyword
-	(function and variable types) e.g. bool isEmpty();
- - Hexadecimal constants
-	(Denoted prefix '0x') e.g. int x; x = 0x5F;
- - Binary constants
-	(Denoted prefix '0b') e.g. int x; x = 0b11001;
- - Modulus operator
-	(Multiplication Precedence, provides division remainder) e.g. z = x % y;
- - Euler's Totient function
-	(Denoted @(n) for some integer n)
-New Semantic features:
+OKCompiler is a miniature version of the C language, with a few extra features.
+It was developed for educational purposes.
+
+## Language Description
+C-Like features:
+ - Conditional statements
+ - Iterative control structures
+ - Functions
+ - Global variables, local variables, and literals
+ - Types
+   - Int, string, char, bool
+ - Operators
+   - Addition, denoted by +
+   - Subtraction, denoted by -
+   - Multiplication, denoted by *
+   - Division, denoted by /
+   - Modulus, denoted by %
+	(Multiplication level precedence) 
+
+Additional features:
+ - Hexadecimal constants, denoted by prefix '0x'
+   (e.g. int x; x = 0x5F;)
+ - Binary constants, denoted by prefix '0b'
+   (e.g. int y; y = 0b11001;)
+ - Type "Void"
+   (Expiremental data type that challenges the semantic analysis, the  
+    implementation does not follow through to code gen)
+ - Operators
+   - Unary "Phi" operator, aka Eulers totient function.
+     Denoted by @(n) for an integer n.
+	
+ 
+## Compiler Description
+Compiler features:
+ - Compilation runtime is provided
+ - Optional color coded console output is available for readability.
+ - Extra verbose debug options (these are meant to expose the theory used)
+   - Token debug: Isolates compiler to its lexical analysis phase and shows
+     class and content information for all tokens.
+   - AST debug: Displays full abstract syntax tree, detailing the full topology,
+     including symbol references and literal values.
+   - Derivation debug: Shows which productions are selected from the grammar
+     during bottom up AST construction of the parsing phase.
+   - Table debug: Contents for the string table and source code table are 
+     printed to the console. 
+   - Function signature debug: OKCompiler creates function signatures to
+     help match function calls to function definitions, and this mode shows them.  
+   - Code generation debug: Prints the generated assembly to the console.
+
+   (These debug options can be modified in the Tree.h file)
+   
+Semantic error checking supported:
+ - Undeclared variables and functions
+ - Multiply declared variables and functions (No overloading)
+ - Argument mismatch, or bad number of arguments in function calls
+ - Indexing arrays with non integer types
+ - Indexing arrays out of bounds (No dynamic memory, so this is detectable)
+ - Type mismatch in assignments
  - Return type mismatch
- - Expression mismatch
 
 Semantics defined by the author:
  - Integer arithmetic involving string literals will substitute in their length 
-	(This means arrays cannot be passed as function parameters)
  - bool and int are loosely typed
-	
-Debug modes:
- - Debug modes are found in tree.h
-	(The following is recommended for verbose output)
-	
-#define TOKEN_DEBUG 0	// Set to 0 to hide tokenizer
-						// 		  1 to show tokenizer
-#define AST_DEBUG 	2	// Set to 0 to hide abstract syntax tree
-						// 		  1 to show abstract syntax tree
-						// 		  2 to show more info (symbols, constants)
-#define DDEBUG 		0	// Set to 0 to hide derivation
-						//		  1 to show derivation
-#define TABLE_DEBUG	0	// Set to 0 to hide source code and id string tables
-						//		  1 to show tables
-#define FSIGN_DEBUG	0	// Set to 0 to hide function signature matching
-						//		  1 to show matching
-#define CGEN_DEBUG	1   // Set to 0 to hide assembly from console
-						//		  1 to show assembly in console
-#define COLOR_MODE	1   // Set to 0 to use all gray terminal text
-						//		  1 to use colors in terminal
-						
- - All output is color coded for readability
-	(The source code is found in colorlogs.c)
 	
 Code Generation:
  - Supports any number of local variables, global variables, and parameters
  - Compiles in MARS 4.5 (Does not compile in MARS 4.2)
- - The assembly produced is horribly unoptimized 
+ - The assembly produced is horribly unoptimized so far
 	
-Quirks / todo list:
+## Quirks / todo list:
  - Symbol table is still not a hash table
  - String table is still not a hash table yet (and uses multiple entries)
  - Need to make a print_symbol_table function
- - Many features excluded from code gen that were not required by the assignment
-    (e.g. comparisons like <= >= and non integer types were never tested)
+ - Many features excluded from code gen
  
-Usage:
+## Usage:
  - Highly recommend a black background terminal for the color coded output.
 	(I've tested with Putty)
  - Recommend using the test files provided
 	./mcc < test.mc
 
-Required files:
+## Required files:
   makefile
   scanner.l
   parser.y
@@ -74,8 +91,6 @@ Required files:
   colorlogs.h
   colorlogs.c
   
----------------------------------
-
 
 
 
