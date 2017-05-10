@@ -4,7 +4,7 @@ OKCompiler is a miniature version of the C language, with a few extra features.
 It was developed for educational purposes.
 
 ## Language Description ##
-C-Like features:
+__C-Like features:__
  - Conditional statements
  - Iterative control structures
  - Functions
@@ -19,7 +19,7 @@ C-Like features:
    - Modulus, denoted by %
 	(Multiplication level precedence) 
 
-Additional features:
+__Additional features:__
  - Hexadecimal constants, denoted by prefix '0x'
    (e.g. int x; x = 0x5F;)
  - Binary constants, denoted by prefix '0b'
@@ -33,7 +33,7 @@ Additional features:
 	
  
 ## Compiler Description ##
-Compiler features:
+__Compiler features:__
  - Compilation runtime is provided
  - Optional color coded console output is available for readability.
  - Extra verbose debug options (these are meant to expose the theory used)
@@ -51,7 +51,7 @@ Compiler features:
 
    (These debug options can be modified in the Tree.h file)
    
-Semantic error checking supported:
+__Semantic error checking supported:__
  - Undeclared variables and functions
  - Multiply declared variables and functions (No overloading)
  - Argument mismatch, or bad number of arguments in function calls
@@ -60,11 +60,11 @@ Semantic error checking supported:
  - Type mismatch in assignments
  - Return type mismatch
 
-Semantics defined by the author:
+__Semantics defined by the author:__
  - Integer arithmetic involving string literals will substitute in their length 
  - bool and int are loosely typed
 	
-Code Generation:
+__Code Generation:__
  - Supports any number of local variables, global variables, and parameters
  - Compiles in MARS 4.5 (Does not compile in MARS 4.2)
  - The assembly produced is horribly unoptimized so far
