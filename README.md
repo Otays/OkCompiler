@@ -1,6 +1,6 @@
 # OKCompiler (0.4.3) README #
 
-OKCompiler is a miniature version of the C language, with a few extra features.
+OKCompiler is a miniature version of the C language, with a few extra features.__
 It was developed for educational purposes.
 
 ## Language Description ##
@@ -16,19 +16,19 @@ __C-Like features:__
    - Subtraction, denoted by -
    - Multiplication, denoted by *
    - Division, denoted by /
-   - Modulus, denoted by %
+   - Modulus, denoted by %__
 	(Multiplication level precedence) 
 
 __Additional features:__
- - Hexadecimal constants, denoted by prefix '0x'
+ - Hexadecimal constants, denoted by prefix '0x'__
    (e.g. int x; x = 0x5F;)
- - Binary constants, denoted by prefix '0b'
+ - Binary constants, denoted by prefix '0b'__
    (e.g. int y; y = 0b11001;)
- - Type "Void"
+ - Type "Void"__
    (Expiremental data type that challenges the semantic analysis, the  
     implementation does not follow through to code gen)
  - Operators
-   - Unary "Phi" operator, aka Eulers totient function.
+   - Unary "Phi" operator, aka Eulers totient function.__
      Denoted by @(n) for an integer n.
 	
  
@@ -76,20 +76,20 @@ __Code Generation:__
  - Many features excluded from code gen
  
 ## Usage: ##
- - Highly recommend a black background terminal for the color coded output.
+ - Highly recommend a black background terminal for the color coded output.__
 	(I've tested with Putty)
- - Recommend using the test files provided
+ - Recommend using the test files provided__
 	./mcc < test.mc
 
 ## Required files: ##
-  makefile
-  scanner.l
-  parser.y
-  driver.c
-  tree.h
-  tree.c
-  colorlogs.h
-  colorlogs.c
+ - makefile
+ - scanner.l
+ - parser.y
+ - driver.c
+ - tree.h
+ - tree.c
+ - colorlogs.h
+ - colorlogs.c
   
 
 
