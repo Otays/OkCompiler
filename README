@@ -1,9 +1,9 @@
-# OKCompiler (0.4.3) README #
+Markup :  # OKCompiler (0.4.3) README #
 
 OKCompiler is a miniature version of the C language, with a few extra features.
 It was developed for educational purposes.
 
-## Language Description ##
+Markup :  ## Language Description ##
 C-Like features:
  - Conditional statements
  - Iterative control structures
@@ -32,7 +32,7 @@ Additional features:
      Denoted by @(n) for an integer n.
 	
  
-## Compiler Description ##
+Markup :  ## Compiler Description ##
 Compiler features:
  - Compilation runtime is provided
  - Optional color coded console output is available for readability.
@@ -69,19 +69,19 @@ Code Generation:
  - Compiles in MARS 4.5 (Does not compile in MARS 4.2)
  - The assembly produced is horribly unoptimized so far
 	
-## Quirks / todo list: ##
+Markup :  ## Quirks / todo list: ##
  - Symbol table is still not a hash table
  - String table is still not a hash table yet (and uses multiple entries)
  - Need to make a print_symbol_table function
  - Many features excluded from code gen
  
-## Usage: ##
+Markup :  ## Usage: ##
  - Highly recommend a black background terminal for the color coded output.
 	(I've tested with Putty)
  - Recommend using the test files provided
 	./mcc < test.mc
 
-## Required files: ##
+Markup :  ## Required files: ##
   makefile
   scanner.l
   parser.y
