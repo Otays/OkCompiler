@@ -1,0 +1,86 @@
+--- OKCompiler (0.4.3) README ---
+
+Features added by the author:
+ - Runtime output
+ - Boolean constants
+	(true,TRUE,false,FALSE)
+ - Boolean keyword
+	(function and variable types) e.g. bool isEmpty();
+ - Hexadecimal constants
+	(Denoted prefix '0x') e.g. int x; x = 0x5F;
+ - Binary constants
+	(Denoted prefix '0b') e.g. int x; x = 0b11001;
+ - Modulus operator
+	(Multiplication Precedence, provides division remainder) e.g. z = x % y;
+ - Euler's Totient function
+	(Denoted @(n) for some integer n)
+New Semantic features:
+ - Return type mismatch
+ - Expression mismatch
+
+Semantics defined by the author:
+ - Integer arithmetic involving string literals will substitute in their length 
+	(This means arrays cannot be passed as function parameters)
+ - bool and int are loosely typed
+	
+Debug modes:
+ - Debug modes are found in tree.h
+	(The following is recommended for verbose output)
+	
+#define TOKEN_DEBUG 0	// Set to 0 to hide tokenizer
+						// 		  1 to show tokenizer
+#define AST_DEBUG 	2	// Set to 0 to hide abstract syntax tree
+						// 		  1 to show abstract syntax tree
+						// 		  2 to show more info (symbols, constants)
+#define DDEBUG 		0	// Set to 0 to hide derivation
+						//		  1 to show derivation
+#define TABLE_DEBUG	0	// Set to 0 to hide source code and id string tables
+						//		  1 to show tables
+#define FSIGN_DEBUG	0	// Set to 0 to hide function signature matching
+						//		  1 to show matching
+#define CGEN_DEBUG	1   // Set to 0 to hide assembly from console
+						//		  1 to show assembly in console
+#define COLOR_MODE	1   // Set to 0 to use all gray terminal text
+						//		  1 to use colors in terminal
+						
+ - All output is color coded for readability
+	(The source code is found in colorlogs.c)
+	
+Code Generation:
+ - Supports any number of local variables, global variables, and parameters
+ - Compiles in MARS 4.5 (Does not compile in MARS 4.2)
+ - The assembly produced is horribly unoptimized 
+	
+Quirks / todo list:
+ - Symbol table is still not a hash table
+ - String table is still not a hash table yet (and uses multiple entries)
+ - Need to make a print_symbol_table function
+ - Many features excluded from code gen that were not required by the assignment
+    (e.g. comparisons like <= >= and non integer types were never tested)
+ 
+Usage:
+ - Highly recommend a black background terminal for the color coded output.
+	(I've tested with Putty)
+ - Recommend using the test files provided
+	./mcc < test.mc
+
+Required files:
+  makefile
+  scanner.l
+  parser.y
+  driver.c
+  tree.h
+  tree.c
+  colorlogs.h
+  colorlogs.c
+  
+---------------------------------
+
+
+
+
+
+
+
+
+
