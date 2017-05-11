@@ -19,7 +19,7 @@ __C-Like features:__
    - Modulus, denoted by %<br />
 	(Multiplication level precedence) 
 
-__Additional features:<br />
+__Additional features:__<br />
  - Hexadecimal constants, denoted by prefix '0x'<br />
    (e.g. int x; x = 0x5F;)
  - Binary constants, denoted by prefix '0b'<br />
