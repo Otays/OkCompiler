@@ -79,7 +79,7 @@ __Code Generation:__
  - Highly recommend a black background terminal for the color coded output.<br />
 	(I've tested with Putty)
  - Recommend using the test files provided<br />
-	./mcc < test.mc
+	./okc < test.ok
 
 ## Required files: ##
  - makefile
