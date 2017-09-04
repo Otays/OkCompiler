@@ -1,7 +1,7 @@
 # OKCompiler (0.4.4) README #
 
 OKCompiler is a miniature version of the C language, with a few extra features.<br />
-It was developed for educational purposes.
+This was developed as an exercise for educational purposes.
 
 ## Language Description ##
 __C-Like features:__
