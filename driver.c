@@ -206,27 +206,27 @@ void printToken(int tokenNum) {
 	
   /* IDs */
   case ID:
-    LOG_CYAN("<ID, "); LOG_CYAN(yytext); LOG_CYAN(">", yytext);
+    LOG_CYAN("<ID, "); LOG_CYAN(yytext); LOG_CYAN("> ", yytext);
     break;
 	
   /* Literals */
   case INTCONST: 
-    LOG_CRIM("<INT, "); LOG_CRIM("%i", atoi(yytext)); LOG_CRIM(">", yytext);
+    LOG_CRIM("<INT, "); LOG_CRIM("%i", atoi(yytext)); LOG_CRIM("> ", yytext);
     break;
   case CHARCONST:
-    LOG_CRIM("<CHAR, "); LOG_CRIM("%c", *(yytext+1)); if(yyleng==4) LOG_CRIM("%c", *(yytext+2)); LOG_CRIM(">", yytext);
+    LOG_CRIM("<CHAR, "); LOG_CRIM("%c", *(yytext+1)); if(yyleng==4) LOG_CRIM("%c", *(yytext+2)); LOG_CRIM("> ", yytext);
     break;
   case STRCONST:
-    LOG_CRIM("<STRING, "); LOG_CRIM("\"%s\"", yytext); LOG_CRIM(">", yytext);
+    LOG_CRIM("<STRING, "); LOG_CRIM("\"%s\"", yytext); LOG_CRIM("> ", yytext);
     break;
   case HEXCONST:
-    LOG_CRIM("<HEX, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
+    LOG_CRIM("<HEX, "); LOG_CRIM("%s", yytext); LOG_CRIM("> ", yytext);
     break;
   case BINCONST:
-    LOG_CRIM("<BINARY, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
+    LOG_CRIM("<BINARY, "); LOG_CRIM("%s", yytext); LOG_CRIM("> ", yytext);
     break;
   case BOOLCONST:
-    LOG_CRIM("<BOOL, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
+    LOG_CRIM("<BOOL, "); LOG_CRIM("%s", yytext); LOG_CRIM("> ", yytext);
     break;
 	
   /* Keywords */
@@ -239,7 +239,7 @@ void printToken(int tokenNum) {
   case KWD_CHAR:
   case KWD_RETURN:
   case KWD_VOID:
-    LOG_GOLD("<KEYWORD, "); LOG_GOLD(yytext); LOG_GOLD(">", yytext);
+    LOG_GOLD("<KEYWORD, "); LOG_GOLD(yytext); LOG_GOLD("> ", yytext);
     break;
 	
   /* binary operators */
@@ -255,40 +255,40 @@ void printToken(int tokenNum) {
   case OPER_EQ:
   case OPER_NEQ:
   case OPER_ASGN:
-    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN(">", yytext);
+    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN("> ", yytext);
     break;
 	
   /* unary operators */
   case EULERS_TOTIENT:
-    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN(">", yytext);
+    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN("> ", yytext);
     break;
 	
 	/* brackets & parens */
   case LSQ_BRKT:
-    printf("<LSQ_BRKT>");
+    printf("<LSQ_BRKT> ");
     break;
   case RSQ_BRKT:
-    printf("<RSQ_BRKT>");
+    printf("<RSQ_BRKT> ");
     break;
   case LCRLY_BRKT:
-    printf("<LCRLY_BRKT>");
+    printf("<LCRLY_BRKT> ");
     break;
   case RCRLY_BRKT:
-    printf("<RCRLY_BRKT>");
+    printf("<RCRLY_BRKT> ");
     break;
   case LPAREN:
-    printf("<LPAREN>");
+    printf("<LPAREN> ");
     break;
   case RPAREN:
-    printf("<RPAREN>");
+    printf("<RPAREN> ");
     break;
 	
   /* punctuation */
   case COMMA:
-    printf("<,>");
+    printf("<,> ");
     break;
   case SEMICLN:
-    printf("<;>");
+    printf("<;> ");
     break;
 	
   /* Other */
@@ -296,7 +296,7 @@ void printToken(int tokenNum) {
     LOG_RED("[ERROR]\n");
     break;
   case ILLEGAL_TOK:
-    LOG_RED("<ILLEGAL_TOK>");
+    LOG_RED("<ILLEGAL_TOK> ");
     break;
   default:
     LOG_YELLOW("[UNHANDLED TOKEN]");
