@@ -91,14 +91,15 @@ __Code Generation:__
  - colorlogs.h
  - colorlogs.c
   
-<br><br>
-## Demonstration: ##
-Here we have a test case using a recursive fibonacci function, compiled into assembly code.
 <br>
-<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/1.png" />
+## Demonstration: ##
+<br>
+Here we have a test case using a recursive fibonacci function, compiled into assembly code.
 <br><br>
+<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/1.png" />
+<br><br><br><br>
 The verbose output option shows how the output of a simple test case may result in an extensive abstract syntax tree, and many lines of assembly (although many space optimizations have been neglected so far.)
-
+<br><br>
 <img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/2.gif" />
 
 
