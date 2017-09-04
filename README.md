@@ -1,4 +1,4 @@
-# OKCompiler (0.4.3) README #
+# OKCompiler (0.4.4) README #
 
 OKCompiler is a miniature version of the C language, with a few extra features.<br />
 It was developed for educational purposes.
@@ -92,7 +92,11 @@ __Code Generation:__
  - colorlogs.c
   
 
+<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/1.png" />
 
+The verbose output option shows how the output of a simple test case may result in an extensive abstract syntax tree, and many lines of assembly (although many space optimizations have been neglected so far.)
+
+<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/2.gif" />
 
 
 
