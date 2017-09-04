@@ -106,7 +106,8 @@ A mode for token debugging is also available, which is sometimes useful when new
 <img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/6.png" />
 
 
-
+<br><br>
+Not the best compiler, but its OK I guess.
 
 
 
