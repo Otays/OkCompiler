@@ -2,8 +2,6 @@
  *	DRIVER : driver.c
  *
  *  Author 		: Ben Pogrund
- *  Instructor 	: Apan Qasem
- *
  *===========================================================================*/
  
 // Version
