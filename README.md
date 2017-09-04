@@ -93,7 +93,6 @@ __Code Generation:__
   
 ## Demonstration: ##
 
-<br>
 Here we have a test case using a recursive fibonacci function, compiled into assembly code.
 <br><br>
 <img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/1.png" />
