@@ -100,6 +100,10 @@ Here we have a test case using a recursive fibonacci function, compiled into ass
 The verbose output option shows how the output of a simple test case may result in an extensive abstract syntax tree, and many lines of assembly (although many space optimizations have been neglected so far.)
 <br><br>
 <img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/2.gif" />
+<br><br><br><br>
+A mode for token debugging is also available, which is sometimes useful when new features are being added. 
+<br><br>
+<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/3.png" />
 
 
 
