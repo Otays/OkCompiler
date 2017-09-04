@@ -9,7 +9,7 @@
 // Version
 #define  MAJOR 	  0
 #define  MINOR 	  4
-#define  REVISION 3
+#define  REVISION 4
  
 // Libraries
 #include <stdio.h>
@@ -206,27 +206,27 @@ void printToken(int tokenNum) {
 	
   /* IDs */
   case ID:
-    printf("<ID, "); LOG_CYAN(yytext); printf(">", yytext);
+    LOG_CYAN("<ID, "); LOG_CYAN(yytext); LOG_CYAN(">", yytext);
     break;
 	
   /* Literals */
   case INTCONST: 
-    printf("<INT, "); LOG_CRIM("%i", atoi(yytext)); printf(">", yytext);
+    LOG_CRIM("<INT, "); LOG_CRIM("%i", atoi(yytext)); LOG_CRIM(">", yytext);
     break;
   case CHARCONST:
-    printf("<CHAR, "); LOG_CRIM("%c", *(yytext+1)); if(yyleng==4) LOG_CRIM("%c", *(yytext+2)); printf(">", yytext);
+    LOG_CRIM("<CHAR, "); LOG_CRIM("%c", *(yytext+1)); if(yyleng==4) LOG_CRIM("%c", *(yytext+2)); LOG_CRIM(">", yytext);
     break;
   case STRCONST:
-    printf("<STRING, "); LOG_CRIM("\"%s\"", yytext); printf(">", yytext);
+    LOG_CRIM("<STRING, "); LOG_CRIM("\"%s\"", yytext); LOG_CRIM(">", yytext);
     break;
   case HEXCONST:
-    printf("<HEX, "); LOG_CRIM("%s", yytext); printf(">", yytext);
+    LOG_CRIM("<HEX, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
     break;
   case BINCONST:
-    printf("<BINARY, "); LOG_CRIM("%s", yytext); printf(">", yytext);
+    LOG_CRIM("<BINARY, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
     break;
   case BOOLCONST:
-    printf("<BOOL, "); LOG_CRIM("%s", yytext); printf(">", yytext);
+    LOG_CRIM("<BOOL, "); LOG_CRIM("%s", yytext); LOG_CRIM(">", yytext);
     break;
 	
   /* Keywords */
@@ -239,7 +239,7 @@ void printToken(int tokenNum) {
   case KWD_CHAR:
   case KWD_RETURN:
   case KWD_VOID:
-    printf("<KEYWORD, "); LOG_GOLD(yytext); printf(">", yytext);
+    LOG_GOLD("<KEYWORD, "); LOG_GOLD(yytext); LOG_GOLD(">", yytext);
     break;
 	
   /* binary operators */
@@ -255,12 +255,12 @@ void printToken(int tokenNum) {
   case OPER_EQ:
   case OPER_NEQ:
   case OPER_ASGN:
-    printf("<OP, "); LOG_GREEN(yytext); printf(">", yytext);
+    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN(">", yytext);
     break;
 	
   /* unary operators */
   case EULERS_TOTIENT:
-    printf("<OP, "); LOG_GREEN(yytext); printf(">", yytext);
+    LOG_GREEN("<OP, "); LOG_GREEN(yytext); LOG_GREEN(">", yytext);
     break;
 	
 	/* brackets & parens */

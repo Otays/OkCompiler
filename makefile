@@ -4,8 +4,8 @@ CFLAGS = -w -I.
 YFLAGS = -v -d 
 YACC = yacc # bison
 
-mcc: y.tab.o lex.yy.o driver.o tree.o colorlogs.o
-	gcc $(CFLAGS) -o mcc driver.o y.tab.o lex.yy.o tree.o colorlogs.o -ll
+okc: y.tab.o lex.yy.o driver.o tree.o colorlogs.o
+	gcc $(CFLAGS) -o okc driver.o y.tab.o lex.yy.o tree.o colorlogs.o -ll
 
 y.tab.o: y.tab.c
 	gcc $(CFLAGS) -c y.tab.c 
@@ -30,8 +30,8 @@ driver.o: driver.c
 	 
 
 clean:
-	rm -f y.tab.* y.output lex.yy.* *.o *~ mcc     
+	rm -f y.tab.* y.output lex.yy.* *.o *~ okc     
 run:
-	./mcc < test.mc
+	./okc < test.ok
 
 

@@ -1,0 +1,38 @@
+/** OKCompiler Test File ----------- **
+ **                                  **
+ **   Author: Ben Pogrund            **
+ ** -------------------------------- **/
+ 
+int x;  // A global variable
+
+int main() { 
+  int y;
+  x = 0x7;    // Hex support (0d7)
+  y = 0b100;  // Binary support (0d4)
+	
+  return fib(x) 
+       + fib(y * 3);  // 13 + 144
+}
+
+int fib(int x) { 
+  // Recursive fibonacci test function
+  int y;
+  y = 1337*1337;
+  
+  if (x == 1) 
+  { return x; }
+
+  if (x == 0) { 
+    return x; 
+  } else { 
+    return fib(x-1) 
+         + fib(x-2); 
+  }
+}
+
+
+
+
+
+
+
