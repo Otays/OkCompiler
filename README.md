@@ -103,7 +103,7 @@ The verbose output option shows how the output of a simple test case may result 
 <br><br><br><br>
 A mode for token debugging is also available, which is sometimes useful when new features are being added. 
 <br><br>
-<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/6.png" />
+<img src="https://raw.githubusercontent.com/Otays/OkCompiler/master/imgs/9.png" />
 
 
 <br><br>
