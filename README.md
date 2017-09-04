@@ -91,8 +91,8 @@ __Code Generation:__
  - colorlogs.h
  - colorlogs.c
   
-<br>
 ## Demonstration: ##
+
 <br>
 Here we have a test case using a recursive fibonacci function, compiled into assembly code.
 <br><br>
